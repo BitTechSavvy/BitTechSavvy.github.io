@@ -67,15 +67,13 @@ const typed = new Typed('.multiple-text', {
 
 // for form 
 
-const form = document.getElementById("contact-form");
-
-form.addEventListener("submit", (event) => {
+document.getElementById("contact").addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent default form submission
 
-  var formData = new FormData(form); // Use the 'form' variable instead of 'this'
+  var formData = new FormData(this);
 
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", "send_email.php", true);
+  xhr.open("POST", "send_email.php", true); // Update the URL here
   
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
@@ -90,3 +88,4 @@ form.addEventListener("submit", (event) => {
 
   xhr.send(formData);
 });
+
