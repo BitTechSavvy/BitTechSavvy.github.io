@@ -67,24 +67,26 @@ const typed = new Typed('.multiple-text', {
 
 // for form 
 
-document.getElementById("contact").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission
+const form = document.getElementById("contact-form");
 
-    var formData = new FormData(this);
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevent default form submission
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "send_email.php", true);
+  var formData = new FormData(form); // Use the 'form' variable instead of 'this'
 
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 200) {
-                // Update the response message element with the server's response
-                document.getElementById("response-message").innerHTML = xhr.responseText;
-            } else {
-                document.getElementById("response-message").innerHTML = "Error sending email.";
-            }
-        }
-    };
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "send_email.php", true);
+  
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        // Update the response message element with the server's response
+        document.getElementById("response-message").innerHTML = xhr.responseText;
+      } else {
+        document.getElementById("response-message").innerHTML = "Error sending email.";
+      }
+    }
+  };
 
-    xhr.send(formData);
+  xhr.send(formData);
 });
