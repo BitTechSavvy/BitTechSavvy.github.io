@@ -64,3 +64,27 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
+
+// for form 
+
+document.getElementById("contact").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    var formData = new FormData(this);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "send_email.php", true);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                // Update the response message element with the server's response
+                document.getElementById("response-message").innerHTML = xhr.responseText;
+            } else {
+                document.getElementById("response-message").innerHTML = "Error sending email.";
+            }
+        }
+    };
+
+    xhr.send(formData);
+});
