@@ -48,9 +48,9 @@ ScrollReveal({
     delay: 200
 });
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact-form', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact-form, .about a', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+ScrollReveal().reveal('.home-content p, .about-content, .about h3, .footer-text p', { origin: 'right' });
 
 /*==================== typed js ====================*/
 
@@ -67,3 +67,30 @@ const typed = new Typed('.multiple-text', {
 
 
 
+const hometyped = new Typed('.home-text', {
+    strings: ["with a flair for backend frameworks like Django and Flask. With a strong foundation in Python, SQL, and data analysis, I specialize in creating efficient, data-driven web solutions. My goal is to craft websites that seamlessly merge form and function, providing users with exceptional experiences."],
+    typeSpeed: 15,
+});
+
+
+
+const abouttyped = new Typed('.about-text', {
+    strings: ["Aligarh College of Engineering and Technology, 2023. A web development connoisseur, adorned with certificates in Python and Advanced SQL from HackerRank. My arsenal includes Python, Django, Flask, and SQL, harmonizing innovation and functionality. Precision honed through a Data Science program from Career 365 Team on Udemy. Join me in a realm where excellence isn't just a goal, but life itself. With each project, I blend analytical finesse and creative ingenuity, breathing life into ideas that shape digital landscapes."],
+    typeSpeed: 20,
+});
+
+
+const webtyped = new Typed('.services-web-text', {
+    strings: ["Crafting tailored web experiences that bring your vision to life. Our expertise, including Django backend, ensures seamless functionality and stunning design."],
+    typeSpeed: 20,
+});
+
+const autotyped = new Typed('.services-auto-text', {
+    strings: ["Empowering workflow through advanced automation. Our streamlined processes enhance precision, productivity, and efficiency."],
+    typeSpeed: 20,
+});
+
+const datatyped = new Typed('.services-db-text', {
+    strings: ["Maximizing data potential for informed decisions. Our experts manage and optimize databases, ensuring smooth information flow."],
+    typeSpeed: 20,
+});
