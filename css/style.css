@@ -190,6 +190,13 @@ span {
     margin: 2rem 0 3rem;
 }
 
+.about-text,
+.home-text,
+.services-web-text,
+.services-auto-text,
+.services-db-text {
+    color: #fff;
+}
 
 .services h2 {
     margin-bottom: 5rem;
