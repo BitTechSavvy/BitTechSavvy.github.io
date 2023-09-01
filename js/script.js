@@ -82,15 +82,15 @@ const abouttyped = new Typed('.about-text', {
 
 const webtyped = new Typed('.services-web-text', {
     strings: ["Crafting tailored web experiences that bring your vision to life. Our expertise, including Django backend, ensures seamless functionality and stunning design."],
-    typeSpeed: 20,
+    typeSpeed: 80,
 });
 
 const autotyped = new Typed('.services-auto-text', {
     strings: ["Empowering workflow through advanced automation. Our streamlined processes enhance precision, productivity, and efficiency."],
-    typeSpeed: 20,
+    typeSpeed: 80,
 });
 
 const datatyped = new Typed('.services-db-text', {
     strings: ["Maximizing data potential for informed decisions. Our experts manage and optimize databases, ensuring smooth information flow."],
-    typeSpeed: 20,
+    typeSpeed: 80,
 });
